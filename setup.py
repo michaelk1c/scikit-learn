@@ -264,6 +264,7 @@ def setup_package():
                     python_requires=">=3.6",
                     install_requires=min_deps.tag_to_packages['install'],
                     package_data={'': ['*.pxd']},
+                    package_dir={'': 'sklearn'},
                     **extra_setuptools_args)
 
     commands = [arg for arg in sys.argv[1:] if not arg.startswith('-')]
